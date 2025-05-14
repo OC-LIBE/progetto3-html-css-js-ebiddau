@@ -1,5 +1,65 @@
-.titoli {
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+header {
     text-align: center;
-    color : white;
-    background-color : #ca3fca;
+    color: #000000;
+    background: linear-gradient(to left, rgb(0, 183, 255), #ffffff);
+    position: relative;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding-top: 1.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+header:before {
+    content: "";
+    background: linear-gradient(to right, rgb(0, 183, 255), #ffffff);
+    height: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header:after {
+    content: "";
+    background: linear-gradient(to right, rgb(0, 183, 255), #ffffff);
+    height: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+nav {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+button {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 1rem;
+    border-radius: 25%;
+}
+
+nav button:hover {
+    background-color:rgb(0, 183, 255);
+    cursor:pointer;
 }
