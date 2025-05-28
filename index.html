@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adopt me</title>
+    <script src="main.js" defer></script>
 </head>
+
 <body>
     <header class="titoli">
         <h1>Welcome</h1>
@@ -25,26 +27,29 @@
     </nav>
 
     <main>
-        <article>
-            <section class="animal-card-photo">
-                <img src="static/milo.jpg">
-            </section>
 
-            <section class="animal-card-text">
-                <h1>Milo</h1>
-                <small>
-                    <span>18 years old</span> -
-                    <span>Animale da latte</span> -
-                    <span>9999999999kg</span>
-                </small>
+        <template id="animal-card-template">
+            <article>
+                <section class="animal-card-photo">
+                    <img src="static/milo.jpg">
+                </section>
 
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum maxime reprehenderit consequatur quis saepe explicabo suscipit perspiciatis laborum atque ratione veritatis at sint odit ducimus alias eos, delectus, a sapiente!
-                </p>
-                <a href="https://eyes.nasa.gov/apps/solar-system/#/jupiter" target="_blank" class="adopt-button">Adotta Milo</a>
-            </section>
-        </article>
+                <section class="animal-card-text">
+                    <h1>Milo</h1>
+                    <small>
+                        <span>18 years old</span> -
+                        <span>apolitico</span> -
+                        <span>99999999999999kg</span>
+                    </small>
 
+                    <p>
+                        911
+                    </p>
+                    <a href="https://eyes.nasa.gov/apps/solar-system/#/jupiter" target="_blank" class="adopt-button">Adotta Milo</a>
+                </section>
+            </article>
+        </template>
+<!--
         <article>
             <section class="animal-card-photo">
                 <img src="static/brrbrrpatapim.jpg">
@@ -97,6 +102,27 @@
                 </p>
                 <a href="https://eyes.nasa.gov/apps/solar-system/#/jupiter" target="_blank" class="adopt-button">Adotta Trallallero Trallallà</a>            </section>
         </article>
+
+        <article>
+            <section class="animal-card-photo">
+                <img src="static/villager.webp">
+            </section>
+
+            <section class="animal-card-text">
+                <h1>Villager</h1>
+                <small>
+                    <span>152 days old</span> -
+                    <span>Schiavo</span> -
+                    <span>63kg</span>
+                </small>
+
+                <p>
+                    Huh. Huuuuuuh! Hu! Uh! Huuuh!
+                </p>
+                <a href="https://www.youtube.com/watch?v=CmVtiOL2TsY" target="_blank" class="adopt-button">Adotta villager</a>
+            </section>
+        </article>
+        -->
     </main>
         
 </body>

@@ -2,13 +2,13 @@ html, body {
     margin: 0;
     padding: 0;
     font-family:Arial, Helvetica, sans-serif;
-    background-color: rgb(143, 209, 235);
+    background-color: rgb(157, 236, 147);
 }
 
 header {
     text-align: center;
     color: #000000;
-    background: linear-gradient(to left, rgb(0, 183, 255), rgb(118, 210, 247));
+    background: linear-gradient(to left, rgb(30, 255, 0), rgb(96, 182, 56));
     position: relative;
 }
 
@@ -25,7 +25,7 @@ header h2 {
 
 header:before {
     content: "";
-    background: linear-gradient(to right, rgb(0, 183, 255), rgb(118, 210, 247));
+    background: linear-gradient(to right, rgb(30, 255, 0), rgb(96, 182, 56));
     height: 1rem;
     position: absolute;
     top: 0;
@@ -35,7 +35,7 @@ header:before {
 
 header:after {
     content: "";
-    background: linear-gradient(to right, rgb(0, 183, 255), rgb(118, 210, 247));
+    background: linear-gradient(to right, rgb(30, 255, 0), rgb(96, 182, 56));
     height: 1rem;
     position: absolute;
     bottom: 0;
@@ -57,11 +57,11 @@ nav button {
     color: #000000;
     background-color: #ffffff;
     font-size: 1rem;
-    border-radius: 25%;
+    border-radius: 1rem;
 }
 
 nav button:hover {
-    background-color:rgb(0, 183, 255);
+    background-color:rgb(96, 182, 56);
     cursor:pointer;
 }
 
@@ -84,7 +84,8 @@ main article {
 }
 
 .animal-card-photo {
-    min-width: 10rem;
+    min-width: 15rem;
+    max-width: 15rem;
     overflow: hidden;
 }
 
@@ -96,12 +97,19 @@ main article {
 }
 
 main article:hover img {
-    transform: rotate(360deg) scale(1.4);
+    transform: rotate(20deg) scale(1.5);
 }
 
 .adopt-button {
-    background: linear-gradient(to right, rgb(118, 210, 247), rgb(0, 183, 255), rgb(118, 210, 247));
     text-decoration: none;
     color: #000000;
+    border: 0.1rem;
+    background:linear-gradient(to right, rgb(94, 207, 42), rgb(30, 255, 0), rgb(94, 207, 42));
     padding: 0.4rem 0.4rem;
+    border-radius: 1rem;
+
+}
+.adopt-button:hover {
+    cursor:pointer;
+    color: #000000;
 }
