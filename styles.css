@@ -65,6 +65,11 @@ nav button:hover {
     cursor:pointer;
 }
 
+nav button:active {
+    background-color:rgb(96, 182, 56);
+    cursor:pointer;
+}
+
 
 main {
     max-width: 700px;
@@ -104,12 +109,13 @@ main article:hover img {
     text-decoration: none;
     color: #000000;
     border: 0.1rem;
-    background:linear-gradient(to right, rgb(94, 207, 42), rgb(30, 255, 0), rgb(94, 207, 42));
+    background: linear-gradient(to right, rgb(94, 207, 42), rgb(30, 255, 0), rgb(94, 207, 42));
     padding: 0.4rem 0.4rem;
     border-radius: 1rem;
-
 }
+
 .adopt-button:hover {
     cursor:pointer;
     color: #000000;
+    background: linear-gradient(to right, rgb(30, 255, 0), rgb(94, 207, 42), rgb(30, 255, 0));
 }
