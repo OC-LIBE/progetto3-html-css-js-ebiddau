@@ -15,18 +15,13 @@
     </header>
 
     <nav>
-        <button class="navBt" id="tutti">Tutti</button>
-        <button class="navBt" id="cani">Cani</button>
-        <button class="navBt" id="gatti">Gatti</button>
-        <button class="navBt" id="conigli">Conigli</button>
-        <button class="navBt" id="dromedari">Dromedari</button>
-        <button class="navBt" id="pesci">Pesci</button>
-        <button class="navBt" id="api">Api</button>
-        <button class="navBt" id="alci">Alci</button>
-        <button class="navBt" id="1year">1 year old</button>
-        <button class="navBt" id="2year">2 years old</button>
-        <button class="navBt" id="3+years">3+ years old</button>
-        <button class="navBt" id="3+years">gigante royale</button>
+        <button data-filter-animal="All">All</button>
+        <button data-filter-animal="Dog">Only Dogs</button>
+        <button data-filter-animal="Cat">Only Cats</button>
+        <button data-filter-animal="Rabbit">Only Rabbits</button>
+        <button data-filter-animal="Animale">Only Animali</button>
+        <button data-filter-animal="Animale Curioso">Only Animali Curiosi</button>
+        <button data-filter-animal="Collaboratore Sottopagato">Only Collaboratori Sottopagati</button>
 
         <!--automatizzare per ogni attributo dell'adottato?-->
     </nav>
@@ -43,7 +38,7 @@
                     <h1>Milo</h1>
                     <small>
                         <span>18 years old</span> -
-                        <span>animale</span>
+                        <span>Animale</span>
                     </small>
 
                     <p>
@@ -53,7 +48,7 @@
                 </section>
             </article>
         </template>
-<!--
+
         <article>
             <section class="animal-card-photo">
                 <img src="static/brrbrrpatapim.jpg">
@@ -63,7 +58,7 @@
                 <h1>Brr Brr Patapim</h1>
                 <small>
                     <span>458 years old</span> -
-                    <span>Animale curioso</span> -
+                    <span>Animale Curioso</span> -
                     <span>8655kg</span>
                 </small>
 
@@ -116,7 +111,7 @@
                 <h1>Villager</h1>
                 <small>
                     <span>152 days old</span> -
-                    <span>Schiavo</span> -
+                    <span>Collaboratore Sottopagato</span> -
                     <span>63kg</span>
                 </small>
 
@@ -126,7 +121,25 @@
                 <a href="https://www.youtube.com/watch?v=CmVtiOL2TsY" target="_blank" class="adopt-button">Adotta villager</a>
             </section>
         </article>
-        -->
+        <article>
+                <section class="animal-card-photo">
+                    <img src="static/milo.jpg">
+                </section>
+
+                <section class="animal-card-text">
+                    <h1>Milo</h1>
+                    <small>
+                        <span>18 years old</span> -
+                        <span>Animale</span>
+                    </small>
+
+                    <p>
+                        Animale di grossa taglia, grazie alle ingenti quantità di vino da lui consumate. Questo particolare individuo ospita sovente tutti i suo compari nella sua abitazione,
+                        per convenire in una sessione di gran bevuta. Grande Milo.
+                    </p>
+                    <a href="https://eyes.nasa.gov/apps/solar-system/#/jupiter" target="_blank" class="adopt-button">Adotta Milo</a>
+                </section>
+            </article>
     </main>
         
 </body>

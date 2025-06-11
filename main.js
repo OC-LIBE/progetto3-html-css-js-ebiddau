@@ -6,24 +6,15 @@ async function getPetsData() {
     return petsData;
 }
 
-let speciesSelection = "cat";
 
 async function displayPets() {
+    
     const pets = await getPetsData();
     const template = document.querySelector('#animal-card-template');
 
     const wrapper = document.querySelector('main');
 
-    console.log(template);
-
-    /*for (let index = 0; index < pets.length; index++) {
-        const pet = pets[index];
-
-        if (speciesSelection != pet.species) {
-            pets.delete(pet);
-        }
-        
-    }*/
+    console.log("array:".concat(template));
 
 
     pets.forEach(pet => {
@@ -69,7 +60,7 @@ async function displayPets() {
 
 }
 
-displayPets()
+displayPets();
 
 
 function getPetAge(birthYear) {
@@ -84,17 +75,34 @@ function capitalize(species) {
     return species[0].toUpperCase() + species.slice(1);
 }
 
+// const allButtons = document.querySelectorAll("nav button");
+// aggiungi una classe per filtro --> confronta filtri e così == a style hover
 
-function navigate() {
-    selection = this.id;
-    console.log(selection);
+
+function displayFilteredAnimals(e) {
+
+    let petsArticles = document.querySelectorAll("article");
+
+    for (let index = 0; index < petsArticles.length; index++) {
+        let petArticle = petsArticles[index];
+
+        const small = petArticle.querySelectorAll('.animal-card-text small span');  // small[1] referes to the species
+
+        if (e.target.dataset.filterAnimal == "All") {
+            petArticle.style.display = "flex";
+        } else if (small[1].textContent != e.target.dataset.filterAnimal) {
+            petArticle.style.display = "none";
+        } else {
+            petArticle.style.display = "flex";
+        }
+    }
 }
 
 
-navButtons = document.getElementsByClassName("navBt");
-for (let index = 0; index < navButtons.length; index++) {
-    const navButton = navButtons[index];
+const filterButtons = document.querySelectorAll("nav button");
 
-    navButton.addEventListener("click", navigate);
-    
-}
+filterButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        displayFilteredAnimals(e)
+    });
+});
