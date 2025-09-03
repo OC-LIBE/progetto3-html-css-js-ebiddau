@@ -101,8 +101,22 @@ function displayFilteredAnimals(e) {
 
 const filterButtons = document.querySelectorAll("nav button");
 
+filterButtons.forEach(_button => {
+    _button.setAttribute("clicked", "false");
+    if (_button.dataset.filterAnimal == "All") {
+        _button.setAttribute("clicked", "true");
+    }
+});
+
 filterButtons.forEach(button => {
+
     button.addEventListener("click", (e) => {
         displayFilteredAnimals(e)
+
+        filterButtons.forEach(_button => {
+            _button.setAttribute("clicked", "false");
+        });
+
+        button.setAttribute("clicked", "true");
     });
 });

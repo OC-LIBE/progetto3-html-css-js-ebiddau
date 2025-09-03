@@ -49,7 +49,7 @@ nav {
     padding-top: 1rem;
 }
 
-nav button {
+nav button[clicked="false"] {
     padding: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -61,13 +61,19 @@ nav button {
 }
 
 nav button:hover {
-    background-color:rgb(96, 182, 56);
+    background-color:rgba(96, 182, 56, 0.158);
     cursor:pointer;
 }
 
-nav button:active {
-    background-color:rgb(96, 182, 56);
-    cursor:pointer;
+nav button[clicked="true"]{
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    color: #000000;
+    background-color: rgb(96, 182, 56);
+    font-size: 1rem;
+    border-radius: 1rem;
 }
 
 
@@ -118,4 +124,32 @@ main article:hover img {
     cursor:pointer;
     color: #000000;
     background: linear-gradient(to right, rgb(30, 255, 0), rgb(94, 207, 42), rgb(30, 255, 0));
+}
+
+@media screen and (max-width: 600px) {
+    main article {
+        flex-direction: column;
+    }
+
+    .animal-card-photo {
+        min-width: 100%;
+        min-height: 100%;
+        flex-basis: 100%;
+    }
+
+    .animal-card-text {
+        padding: 20px;
+    }
+    
+    .animal-card-text h3 {
+        font-size: 1.2rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header h2 {
+        font-size: 1rem;
+    }
 }
