@@ -1,10 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adopt me</title>
+    <script src="main.js" defer></script>
 </head>
+
 <body>
+    <header class="titoli">
+        <h1>Welcome</h1>
+        <h2>Adotta animali!</h2>
+    </header>
+
+    <nav>
+        <button data-filter-animal="All">All</button>
+        <button data-filter-animal="Dog">Only Dogs</button>
+        <button data-filter-animal="Cat">Only Cats</button>
+        <button data-filter-animal="Rabbit">Only Rabbits</button>
+        <button data-filter-animal="Animale">Only Animali</button>
+        <button data-filter-animal="Animale Curioso">Only Animali Curiosi</button>
+        <button data-filter-animal="Collaboratore Sottopagato">Only Collaboratori Sottopagati</button>
+
+        <!--automatizzare per ogni attributo dell'adottato?-->
+    </nav>
+
+    <main>
+
+        <template id="animal-card-template">
+            <article class="animalArticle">
+                <section class="animal-card-photo">
+                    <img src="static/milo.jpg">
+                </section>
+
+                <section class="animal-card-text">
+                    <h1>Milo</h1>
+                    <small>
+                        <span>18 years old</span> -
+                        <span>Animale</span>
+                    </small>
+
+                    <p>
+                        911
+                    </p>
+                    <a href="https://eyes.nasa.gov/apps/solar-system/#/jupiter" target="_blank" class="adopt-button">Adotta Milo</a>
+                </section>
+            </article>
+        </template>
+
+        <article class="animalArticle">
+            <section class="animal-card-photo">
+                <img src="static/brrbrrpatapim.jpg">
+            </section>
+            
+            <section class="animal-card-text">
+                <h1>Brr Brr Patapim</h1>
+                <small>
+                    <span>458 years old</span> -
+                    <span>Animale Curioso</span> -
+                    <span>8655kg</span>
+                </small>
+
+                <p>
+                    Brr, brr, Patapim, il mio cappello è pieno di Slim!
+                    Nel bosco fitto e misterioso viveva un essere assai curioso
+                    Con radici intrecciate e gambe incrociate, mani sottili, braccia agitate
+                    Il suo naso lungo come un prosciutto, un po' babbuino, un po' cespugliotto
+                    Si chiamava Patapim, oh che strano, e parlava italiano ma con accento arcano!
+                    Un giorno trovò un cappello dorato: "Perfetto!" gridò, "che bel risultato!"
+                    Ma dentro c'era Slim, il ranocchio blu, che faceva "brr, brr" senza un perché in più
+                    Patapim piangeva: "Mio caro cappello, ora c'è Slim, che guaio, che duello!"
+                    Saltava, rideva, si disperava, ma il ranocchio mai se ne andava
+                    Con foglie sui gomiti e muschio sul mento, corse nel bosco spinto dal vento
+                    Andò dal mago Tiramisù, chiedendo aiuto con un gran "ciuu ciuu!"
+                    Il mago rispose, mangiando un panino: "Per togliere Slim, serve un palloncino!"
+                    Così Patapim, con gran confusione, soffiò nel pallone con emozione
+                    Slim volò, con un grande "boom", sparendo nel cielo come un bel fungo di fumo!
+                    Ora Patapim balla nel vento
+                </p>
+                <a href="https://www.youtube.com/shorts/wUG8VdiBS4s" target="_blank" class="adopt-button">Adopt Patapim</a>
+            </section>
+        </article>
+
+        <article class="animalArticle">
+            <section class="animal-card-photo">
+                <img src="static/trallallerotrallallà.jpg">
+            </section>
+            
+            <section class="animal-card-text">
+                <h1>Trallalero Trallallà</h1>
+                <small>
+                    <span>11 years old</span> -
+                    <span>Squalone Smerdone</span> -
+                    <span>140kg</span>
+                </small>
+
+                <p>
+                    Ero con il mio fottuto figlio merdardo a giocare a Fortnite, quando a un punto arriva mia nonna, Ornella Leccacappella, a avvisarci che quello stronzo di Burger ci aveva invitato a cena per mangiare un purè di cazzi
+                </p>
+                <a href="https://eyes.nasa.gov/apps/solar-system/#/jupiter" target="_blank" class="adopt-button">Adotta Trallallero Trallallà</a>            </section>
+        </article>
+
+        <article class="animalArticle">
+            <section class="animal-card-photo">
+                <img src="static/villager.webp">
+            </section>
+
+            <section class="animal-card-text">
+                <h1>Villager</h1>
+                <small>
+                    <span>152 days old</span> -
+                    <span>Collaboratore Sottopagato</span> -
+                    <span>63kg</span>
+                </small>
+
+                <p>
+                    Huh. Huuuuuuh! Hu! Uh! Huuuh!
+                </p>
+                <a href="https://www.youtube.com/watch?v=CmVtiOL2TsY" target="_blank" class="adopt-button">Adotta villager</a>
+            </section>
+        </article>
+
+        <article class="animalArticle">
+            <section class="animal-card-photo">
+                <img src="static/milo.jpg">
+            </section>
+
+            <section class="animal-card-text">
+                <h1>Milo</h1>
+                <small>
+                    <span>18 years old</span> -
+                    <span>Collaboratore Sottopagato</span>
+                </small>
+
+                <p>
+                    Animale di grossa taglia, grazie alle ingenti quantità di vino da lui consumate. Questo particolare individuo ospita sovente tutti i suo compari nella sua abitazione,
+                    per convenire in una sessione di gran bevuta. Grande Milo.
+                </p>
+                <a href="https://eyes.nasa.gov/apps/solar-system/#/jupiter" target="_blank" class="adopt-button">Adotta Milo</a>
+            </section>
+        </article>
+
+        <article class="notFound">
+            <h2>
+                <span>c</span>
+            </h2>
+        </article>
+    </main>
+        
 </body>
 </html>
