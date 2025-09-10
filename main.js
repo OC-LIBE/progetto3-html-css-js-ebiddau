@@ -8,6 +8,11 @@ async function getPetsData() {
 
 
 async function displayPets() {
+
+    let notFoundH2 = document.querySelector(".notFound h2");
+    notFoundH2.style.display = "none";
+
+
     
     const pets = await getPetsData();
     const template = document.querySelector('#animal-card-template');
@@ -81,7 +86,9 @@ function capitalize(species) {
 
 function displayFilteredAnimals(e) {
 
-    let petsArticles = document.querySelectorAll("article");
+    let petsArticles = document.querySelectorAll(".animalArticle");
+
+    let shownPets = petsArticles.length;
 
     for (let index = 0; index < petsArticles.length; index++) {
         let petArticle = petsArticles[index];
@@ -92,9 +99,21 @@ function displayFilteredAnimals(e) {
             petArticle.style.display = "flex";
         } else if (small[1].textContent != e.target.dataset.filterAnimal) {
             petArticle.style.display = "none";
+            shownPets -= 1;
         } else {
             petArticle.style.display = "flex";
         }
+    }
+
+    console.log(shownPets);
+    let notFoundH2 = document.querySelector(".notFound h2");
+
+    if (shownPets == 0) {
+        notFoundH2.querySelector("span").textContent = "Sorry, no ".concat(e.target.dataset.filterAnimal.toLowerCase()).concat(" found :(");
+        notFoundH2.style.display = "flex";
+    } else {
+        console.log("passed")
+        notFoundH2.style.display = "none";
     }
 }
 
